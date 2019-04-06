@@ -10,11 +10,31 @@
     <table border="1" width=500 height=100>
         <tr>
         {% for p in prof %}
-        <tr><td><a href="/exibir">{{p[0]}}</a></td></tr>
-
-        {% endfor %}
+        <tr><td>{{p[0]}}</td></tr>
         </tr>
-
+        {%endfor%}
     </table>
+
+    <form id= login action="/exibir" method="POST">
+
+        <p>
+            <label>
+                Escolha um professor da lista
+            </label><br>
+        </p>
+        <p>
+            <label>
+                Nome:
+            </label><br>
+            <input type="text" name="nomeprof">
+        </p>
+
+        <p><br><input type="submit" name="detalhesbt" value="Ver detalhes">
+
+        </p>
+        {% if erro %}
+            <span style="color:red">{{erro}}</span><br>
+        {% endif %}
+    </form>
 </body>
 </html>
