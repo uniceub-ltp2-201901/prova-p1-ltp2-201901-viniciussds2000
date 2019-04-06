@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professores</title>
+</head>
+<body>
+    <h1><a>Lista de Professores</a></h1>
+
+    <table border="1" width=500 height=100>
+        <tr>
+        {% for p in prof %}
+        <tr><td><a href="/exibir">{{p[0]}}</a></td></tr>
+
+        {% endfor %}
+        </tr>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre professor</title>
+</head>
+<body>
+Exibir professores
+
+    <table border="1">
+        <tr>
+            <td>Nome</td>
+            <td>Nome da mãe</td>
+            <td>Data de nasc</td>
+            <td>Titulação</td>
+        </tr>
+        <tr>
+        {% for det in detalhes %}
+            <td>{{det[0]}}</td>
+            <td>{{det[1]}}</td>
+            <td>{{det[2]}}</td>
+            <td>{{det[3]}}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
